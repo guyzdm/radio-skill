@@ -44,7 +44,7 @@ class Radio(CommonPlaySkill):
         try:
             data = re.sub(self.translate_regex('radio'), '', phrase)
             rb = RadioBrowser()
-            stations = rb.search(name=data,bitrateMin='128')
+            stations = rb.search(name=data,bitrate_min=128)
             stations != []
             self.log.info('CPS Match (radio): ' + stations[0]['name'] +
                           ' | ' + stations[0]['url'])
